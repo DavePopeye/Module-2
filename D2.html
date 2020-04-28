@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<!--
+ASSIGNMENT RULES
+- The solution must be pushed to the repository and be available for the tutors by the end of the day
+- You can ask for tutor's help
+- You can google / use StackOverflow BUT we suggest you to use just the material provided
+- To test the page, just open it with your default browser.
+- Use Bootstrap4 classes to render the page.
+- Use correctly containers and rows in order to have a great display
+
+ASSIGNMENT TOPIC
+You are creating a website to showcase your favourite music albums.
+In this page you'd like to have a short bio of yourself, the top albums of your life, 
+the worst album you ever listen to and everything related to the music you love.
+
+NOTE:
+Most of the time, even the most expert of designers, need inspiration.
+Spend 30 minutes surfing the web and searching for the way of rapresenting album that you like the most.
+Could be the Amazon way, the Spotity or Apple music way or some other blog out there.
+-->
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <!-- IMPORT ALL THE BOOSTRAP RELATED CSS & SCRIPTS-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <style>
+        /* EXERCISE 1
+            For all Albums we'd like to have a consistent style.
+            Create a class for:
+            - The album container
+            - The album cover
+            - The album title
+            - The album group / singer / dj
+            - The album genre
+            - The album duration
+            - etc
+         */
+        .col {
+            margin-top: 50px;
+        }
+
+        .album {
+            font-size: larger;
+            font-weight: bold;
+            text-align: right;
+            margin-right: 10px;
+        }
+
+        .info {
+            margin: 0px;
+            font-size: larger;
+        }
+
+        .mostFav {
+            background-color: black;
+            color: goldenrod;
+            margin-right: 10px;
+
+        }
+
+        ol {
+            font-weight: bold;
+        }
+
+        .bgcR {
+            background-color: rgb(180, 180, 253);
+
+        }
+
+        .bgcB {
+            background-color: rgba(218, 165, 32, 0.767);
+        }
+
+        .bgcE {
+            background-color: rgb(85, 126, 250);
+        }
+
+        .bgcS {
+            background-color: gainsboro;
+        }
+
+
+
+
+
+
+
+
+
+
+
+        /* EXERCISE 2 
+            Based on the artists you like the most, create a combination of colors 
+            to override bootstrap standard and make your website unique
+         */
+    </style>
+</head>
+
+<body>
+    <!-- EXERCISE 3 
+            Implement a navigation bar using the bootstrap component
+            This navigation bar must be linked to every section in your page
+        -->
+
+    <ul class="nav">
+        <li class="nav-item">
+            <a class="nav-link active" href=".container-xl">Albums</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Most Fav Album</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Most Nope Songs</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+        </li>
+    </ul>
+
+    <!-- EXERCISE 4
+        Create a Responsive section for your favourite albums.
+        In this section you should have:
+        - 4 albums per row when the screen is very large
+        - 3 albums per row when you are on a tablet (or a smaller window)
+        - 2 albums per row when you are on a small screen
+    -->
+    <div class="container-xl">
+        <div class="row">
+            <div class="col head">
+                <h1>Albums</h1>
+
+            </div>
+            <div class="col bgcR">
+                <img src="img/RHCP.jpg" class="rounded float border border-dark"
+                    alt="Red Hot Chili Peppers - By The Way" width="200" height="200">
+                <p class="album"> --- By The Way</p>
+                <p class="info">Red Hot Chili Peppers</p>
+                <p class="info">Rock</p>
+                <p class="info">Summer 2002</p>
+            </div>
+            <div class="col bgcB">
+                <img src="img/ES.jpg" class="rounded float border border-dark" alt="Emter Shikari - Take To The Skies"
+                    width="200" height="200">
+                <p class="album"> --- Sempiternal</p>
+                <p class="info">Bring Me The Horizon</p>
+                <p class="info">Metal</p>
+                <p class="info">Spring 2013</p>
+            </div>
+            <div class="col bgcE">
+                <img src="img/eb.jpg" class="rounded float border border-dark" alt="Ezio Bosso - The 12th Room"
+                    width="200" height="200">
+                <p class="album"> --- The 12th Room</p>
+                <p class="info">Ezio Bosso</p>
+                <p class="info">Classical Music</p>
+                <p class="info">Fall 2015</p>
+            </div>
+            <div class="col bgcS">
+                <img src="img/Skr.jpeg" class="rounded float border border-dark" alt="Skrillex - Bangarang" width="200"
+                    height="200">
+                <p class="album"> --- Bangarang</p>
+                <p class="info">Skrillex</p>
+                <p class="info">Dubstep</p>
+                <p class="info">Winter 2012</p>
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <!-- EXERCISE 5
+            Create a section for the album review.
+            Pick one of your fav albums, and create a section with:
+            - Cover
+            - Title
+            - Band
+            - Lenght
+            - Genre
+            - Tracklist
+            - ... And whatever you think it's interesting about it!
+        -->
+    <h1>Most Fav Albums</h1>
+    <div class="row mostFav">
+        <div class="col mx-2 ">
+
+            <img src="img/ES.jpg" class="rounded float-left" alt="Bring Me The Horizion - Sempiternal" width="400"
+                height="400">
+        </div>
+        <div class="col float-left">
+            <h4>Sempiternal</h4>
+            <p>Bring Me The Horzion</p>
+            <p>Lenght: 44:11 </p>
+            <p>Genre: Metal</p>
+            <span>Tracklist</span>
+            <ol>
+                <li>Can You Feel My Heart - 3.48</li>
+                <li>The House Of Wolves - 3.25</li>
+                <li>Empire(Let Them Sing) - 3.45</li>
+                <li>Sleepwalking - 3.50</li>
+                <li>Go to Hell, for Heaven's Sake – 4:02</li>
+                <li>Shadow Moses – 4:03</li>
+                <li>And the Snakes Start to Sing – 5:01</li>
+                <li>Seen It All Before – 4:07</li>
+                <li>Antivist – 3:13</li>
+                <li>Crooked Young – 3:34</li>
+                <li>Hospital for Souls – 6:44</li>
+            </ol>
+        </div>
+
+    </div>
+
+    <!-- EXERCISE 6
+            Worst album list! Find out the music you don't really like or you find overrated and list it
+            in this "hall of shame" chart!
+        -->
+    <H1>Most NOPE Songs</H1>
+    <div class="nope">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Songs</th>
+                    <th>Artist</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Un Nuovo Bacio</td>
+                    <td>Gigi D'Alessio</td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>Auto Blu</td>
+                    <td>Shiva</td>
+
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td>Gucci Gang</td>
+                    <td>Lil Pump</td>
+                </tr>
+                <tr>
+                    <th scope="row">4</th>
+                    <td>CHIHUAHUA</td>
+                    <td>DJ Bobo</td>
+                </tr>
+                <tr>
+                    <th scope="row">5</th>
+                    <td>Asereje</td>
+                    <td>Las Ketchup</td>
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+
+
+
+
+    <!-- EXERCISE 7
+            Do you have any musician / band you admire or you are fan of?
+            This section is dedicated to him / her / them!
+            Feel free to experiment in this part of the page.
+        -->
+
+    <!-- EXERCISE 8
+            Just covers!
+            Create a tapestry of album pictures. Every album picture must be "square" (use CSS to do that).
+            Put at least 20 covers (also repeated) to have a nice effect and see how Bootstrap handles it.
+        -->
+
+    <!-- EXERCISE 9
+            Implement a footer with some information / social links
+        -->
+
+    <!-- EXERCISE 10
+            Every time the user clicks on a album picture, toggle the album details
+        -->
+
+    <!-- EXERCISE 11
+            Add a button to each section. By clicking on it the section appears (if hidden) or disappears (if visible)
+        -->
+
+    <!--
+            EXERCISE 12
+            Add in the footer a field that counts, on page load, how many ALBUMS are on the page 
+        -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
